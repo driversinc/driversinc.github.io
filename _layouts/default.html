@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/static/stylesheets/styles.css">
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div><!-- /.navbar-header -->
+          <div class="collapse navbar-collapse" id="site-nav">
+            <ul class="nav navbar-nav navbar-right di-nav">
+              <li><a href="/">Home</a></li>
+              <li{% if page.url == "/about.html"      %} class="active"{%endif%}><a href="/about.html">About</a></li>
+              <li{% if page.url == "/faq.html"        %} class="active"{%endif%}><a href="/faq.html">FAQ</a></li>
+              <li{% if page.url == "/contact.html"    %} class="active"{%endif%}><a href="/contact.html">Contact Us</a></li>
+              <li{% if page.url == "/partners.html"   %} class="active"{%endif%}><a href="/partners.html">Partners</a></li>
+              <li{% if page.url == "/employment.html" %} class="active"{%endif%}><a href="/employment.html">Employment</a></li>
+            </ul><!-- /.nav -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav><!-- /.navbar -->
+
+      <div class="slogan hidden-sm hidden-xs hidden-md">
+        <div class="l1">We drive you in</div>
+        <div class="l2">your car</div>
+      </div>
+
+      <div class="site-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a href="/" class="site-name"><img src="/static/images/masthead.png" alt="{{ site.name }}" class="img-responsive" /></a>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6 col-md-12 margin-leader">
+                  <a href="tel:+17039943931" class="btn btn-bright btn-block">
+                    <div class="visible-md visible-lg">Request a Driver: <strong>(703) 994 3931</strong></div>
+                    <div class="visible-sm visible-xs"><i class="glyphicon glyphicon-earphone"></i> Request a Driver</div>
+                  </a>
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-12 margin-leader">
+                  <a href="/employment.html" class="btn btn-bright btn-block">Apply to be a Driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.site-header -->
+
+      <div class="container">
+        {{ content }}
+      </div>
+
+      <div class="footer">
+        <img src="/static/images/logo.png" class="logo" />
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="/static/javascripts/bootstrap/transition.js"></script>
+      <script src="/static/javascripts/bootstrap/collapse.js"></script>
+
+    </body>
+</html>

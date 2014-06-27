@@ -1,0 +1,4 @@
+name: Drivers Incorporated
+markdown: kramdown
+highlighter: false
+exclude: ['static/.sass-cache', 'static/sass']

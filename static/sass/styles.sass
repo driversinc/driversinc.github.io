@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700,700italic,300italic)
+@import ../fonts/bullpen.css
+
+@import variables
+@import bootstrap
+
+@import compass/css3/text-shadow
+
+@mixin text-3d($size: 5, $directionX: 1, $directionY: 1, $blur: 1px, $color: black )
+  @if unitless($blur) and $blur != 0
+    @warn "Assuming #{$blur} to be in pixels"
+    $blur: 1px * $blur
+  $string: ''
+  @for $i from 1 through $size
+    $string: $string + ( #{$i * $directionX}px #{$i * $directionY}px $blur $color )
+    @if $i < $size
+      $string: $string + ', '
+  +text-shadow(#{$string})
+
+body
+  font-weight: 300
+
+h2
+  text-align: center
+  color: $orange
+  font-size: $font-size-base * 1.75
+  @extend .margin-trailer
+
+.margin-trailer
+  margin-bottom: $line-height-computed
+
+.margin-trailer-half
+  margin-bottom: $line-height-computed / 2
+
+.margin-leader
+  margin-top: $line-height-computed
+
+.margin-leader-double
+  margin-top: $line-height-computed * 2
+
+.glyphicon
+  font-size: 12px
+
+.glyphicon-double
+  font-size: 24px
+
+.slogan
+  line-height: 1
+  letter-spacing: 3px
+  font-family: "BullpenHv-Italic"
+  text-transform: uppercase
+  color: #FFF
+  font-size: 25px
+  text-align: right
+  top: 80px
+  left: 30px
+  position: absolute
+  z-index: 1000
+  .l1
+    position: relative
+    z-index: 3
+    +text-3d(100, -1, -1, 0, #A2A09F)
+  .l2
+    font-size: 40px
+    position: relative
+    z-index: 1
+    +text-3d(100, -1, -1, 0, #707070)
+
+.site-header
+  @extend .margin-trailer
+  background: #1C1C1C
+  padding: #{$line-height-computed/2} 0
+
+.site-name
+  margin: 0 auto
+  max-width: 400px
+  display: block
+
+.di-nav
+  text-transform: uppercase
+  letter-spacing: 2px
+
+.footer
+  @extend .margin-leader-double
+  @extend .margin-trailer
+
+.logo
+  width: 75px
+  display: block
+  margin: 0 auto
+
+.btn-bright
+  $bright-color: #13749a
+  background-color: $bright-color
+  color: #FFF
+  padding: $line-height-computed / 2
+  &:hover
+    background-color: darken($bright-color, 3%)
+    color: #FFF
+  &:active
+    background-color: darken($bright-color, 6%)
+    color: #FFF
