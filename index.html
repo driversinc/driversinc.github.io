@@ -1,22 +1,37 @@
 ---
-layout: default
+layout: base
 title: Driving You &amp; Your Car Home
 ---
 
-<div class="row">
-  <div class="col-sm-4">
-    <h2>Designated Drivers</h2>
-    <img src="/media/dd.jpg" class="img-responsive img-rounded margin-trailer margin-leader" />
-    <p>Our driver will drive you and your car home. Designated Drivers meet you at Point A and drive you to Point B. We charge a $30 base fee + $3 per mile.  Tipping for good service is customary.</p>
-  </div>
-  <div class="col-sm-4">
-    <h2>Hourly Drivers</h2>
-    <img src="/media/key.jpg" class="img-responsive img-rounded margin-trailer margin-leader" />
-    <p>Our driver will pick you up at Point A, drive you wherever you’d like to go, and wait with your car. At the end of the job our driver will take you back to Point A. There is a three hour minimum. The charge is $35 per hour, tip included. Reservations required.</p>
-  </div>
-  <div class="col-sm-4">
-    <h2>Assisted Drivers</h2>
-    <img src="/media/smiling.jpg" class="img-responsive img-rounded margin-trailer margin-leader" />
-    <p>Our driver will work with you and your family to arrange a one time or recurring service. We can help with errands and accompany you on outings. To request a quote please <a href="/contact.html">contact us</a>!</p>
-  </div>
+<div id="fullpage" class="pane-set">
+	<div class="pane section">
+		<div class="pane-content">
+			<h1 class="site-title pull-left">Driving you &amp; Your Car</h1>
+			<div class="text-right">
+				<a href="#" class="btn btn-default">Find Out How</a><br />
+				<a href="#" class="btn btn-default">Make a Reservation</a>
+			</div>
+		</div><!-- /.pane-content -->
+	</div><!-- /.pane -->
+	<div class="pane section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div class="pane section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
 </div>
+
+<script type="text/javascript">
+	$(function(){
+		$navigation = $('#ScrollNavigation')
+		$('.pane-set').fullpage({
+			anchors: ["Home", "HowItWorks", "ServiceArea", "Partners", "Contact", "TheNeed", "DriveWithUs"],
+			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+			scrollBar: true,
+			afterLoad: function (anchorLink, index) {
+				$navigation.children().removeClass('active');
+				$navigation.find('[href$=\''+anchorLink+'\']').parent().addClass('active');
+			}
+		});
+	});
+</script>
