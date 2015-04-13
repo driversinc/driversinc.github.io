@@ -4,34 +4,41 @@ title: Driving You &amp; Your Car Home
 ---
 
 <div id="fullpage" class="pane-set">
-	<div class="pane section">
+
+	<div class="pane pane-titlecard">
 		<div class="pane-content">
-			<h1 class="site-title pull-left">Driving you &amp; Your Car</h1>
-			<div class="text-right">
-				<a href="#" class="btn btn-default">Find Out How</a><br />
-				<a href="#" class="btn btn-default">Make a Reservation</a>
+			<div class="pad-box bg-gray-dark">
+				<div class="container">
+					<div class="row">
+						<h1 class="site-title col-md-7">
+							<img src="static/images/logo.png" class="img-responsive" />
+						</h1><!-- /.site-title -->
+						<div class="text-right col-md-5 hidden-xs hidden-sm">
+							<a href="#" class="btn btn-orange-bright btn-fat text-lowercase margin-trailer margin-leader">Find Out How</a><br />
+							<a href="#" class="btn btn-orange-bright btn-fat text-lowercase margin-trailer">Make a Reservation</a>
+						</div><!-- /.text-right -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.pad-box -->
+			<div class="container">
+				<div class="row margin-leader-dbl">
+					<div class="col-md-8 col-md-offset-2">
+						<img src="/static/images/car.png" class="img-responsive" />
+					</div>
+				</div>
 			</div>
 		</div><!-- /.pane-content -->
 	</div><!-- /.pane -->
+
 	<div class="pane section">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</div>
+
 	<div class="pane section">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</div>
+
 </div>
 
 <script type="text/javascript">
-	$(function(){
-		$navigation = $('#ScrollNavigation')
-		$('.pane-set').fullpage({
-			anchors: ["Home", "HowItWorks", "ServiceArea", "Partners", "Contact", "TheNeed", "DriveWithUs"],
-			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-			scrollBar: true,
-			afterLoad: function (anchorLink, index) {
-				$navigation.children().removeClass('active');
-				$navigation.find('[href$=\''+anchorLink+'\']').parent().addClass('active');
-			}
-		});
-	});
 </script>

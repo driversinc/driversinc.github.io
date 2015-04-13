@@ -1,5 +1,89 @@
 ---
 ---
 
-.pane
-	padding-top: 50px
+@import fonts/styles.css
+
+$vertical-unit: 20px
+$border-radius: 3px
+
+$base-font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$accent-font: 'avantgarde-cond', HelveticaNeue-Condensed, 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+$white: white
+$black: #080808
+$gray-light: #dbdbdb
+$gray-dark: #171717
+$gray: #242424
+$orange-bright: #EF7C2E
+$colors: ('white': $white, 'black': $black, 'gray-light': $gray-light, 'gray-dark': $gray-dark, 'gray': $gray, 'orange-bright': $orange-bright)
+$white-text-colors: ('orange-bright',)
+
+@import panes
+
+@function brightness($color)
+	@if type-of($color) == color
+		@return (red($color) * 0.299 + green($color) * 0.587 + blue($color) * 0.114) / 255 * 100%
+	@else
+		@return unquote("brightness(#{$color})")
+
+@function contrast-color($color, $dark: $contrasted-dark-default, $light: $contrasted-light-default)
+	@if $color == null
+		@return null
+	@else
+		$color-brightness: brightness($color)
+		$dark-text-brightness: brightness($dark)
+		$light-text-brightness: brightness($light)
+		@return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark)
+
+@each $color-name, $color-hex in $colors
+	$color-contrast: if(index($white-text-colors, $color-name), #FFF, contrast-color($color-hex, $white, $black))
+
+	.color-#{$color-name}
+		color: $color-hex
+
+	.bg-#{$color-name}, .btn-#{$color-name}
+		background: $color-hex
+		color: $color-contrast
+
+body
+	background: $gray
+	color: $white
+
+.pad-box
+	padding: $vertical-unit
+
+.margin-trailer
+	margin-bottom: $vertical-unit
+
+.margin-leader
+	margin-top: $vertical-unit
+
+.margin-trailer-dbl
+	margin-bottom: $vertical-unit * 2
+
+.margin-leader-dbl
+	margin-top: $vertical-unit * 2
+
+.btn-fat
+	padding: #{$vertical-unit * .75} #{$vertical-unit * 3.5}
+	font-size: 18px
+
+.navbar-black
+	background: $black
+	.navbar-nav > li > a
+		color: $gray-light
+		font-family: $accent-font
+		font-size: 16px
+		letter-spacing: 2px
+		&:hover, &:active, &:focus, &.active
+			color: $white
+			background: transparent
+	.navbar-toggle .icon-bar
+		background-color: #FFF
+
+// Bootstrap Overrides
+.btn
+	border-radius: $border-radius
+	font-family: $base-font
+	letter-spacing: .05em
+	font-weight: 300
