@@ -45,9 +45,22 @@ $white-text-colors: ('orange-bright',)
 		background: $color-hex
 		color: $color-contrast
 
+	.btn-#{$color-name}:hover
+		background: darken($color-hex, 5%)
+		color: $color-contrast
+
 body
 	background: $gray
 	color: $white
+	font-size: 20px
+	line-height: 30px
+	font-family: $base-font
+	font-weight: 300
+
+h2
+	font-family: $accent-font
+	text-transform: uppercase
+	letter-spacing: .15em
 
 .pad-box
 	padding: $vertical-unit
@@ -63,6 +76,9 @@ body
 
 .margin-leader-dbl
 	margin-top: $vertical-unit * 2
+
+.text-huge
+	font-size: 100px
 
 .btn-fat
 	padding: #{$vertical-unit * .75} #{$vertical-unit * 3.5}
@@ -85,5 +101,7 @@ body
 .btn
 	border-radius: $border-radius
 	font-family: $base-font
-	letter-spacing: .05em
 	font-weight: 300
+
+.btn.text-uppercase, .btn.text-lowercase
+	letter-spacing: .1em
