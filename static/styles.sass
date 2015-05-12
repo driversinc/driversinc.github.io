@@ -80,6 +80,9 @@ h2
 .text-huge
 	font-size: 100px
 
+.numeral-huge
+	font-family: $accent-font
+
 .btn-fat
 	padding: #{$vertical-unit * .75} #{$vertical-unit * 3.5}
 	font-size: 18px
@@ -96,6 +99,18 @@ h2
 			background: transparent
 	.navbar-toggle .icon-bar
 		background-color: #FFF
+
+// Specific elements
+
+.box-divider
+	height: 255px
+	background: url("/static/images/boxes.png")
+	background-repeat: repeat-x
+	position: relative
+	top: -127px
+
+.map
+	background: radial-gradient(circle at 64% 50%, $orange-bright 0%, $orange-bright 30%, rgba($orange-bright, 0) 47%)
 
 // Bootstrap Overrides
 .btn
