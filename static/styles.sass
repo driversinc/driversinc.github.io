@@ -8,6 +8,7 @@ $border-radius: 3px
 
 $base-font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
 $accent-font: 'avantgarde-cond', HelveticaNeue-Condensed, 'Helvetica Neue', Helvetica, Arial, sans-serif
+$funky-font: 'nexa_rust_sansblack', Helvetica, sans-serif
 
 $white: white
 $black: #080808
@@ -115,8 +116,10 @@ h2
 // Bootstrap Overrides
 .btn
 	border-radius: $border-radius
-	font-family: $base-font
-	font-weight: 300
+	font-family: $funky-font
+	font-weight: 600
+	text-transform: uppercase
+	letter-spacing: 3px
 
-.btn.text-uppercase, .btn.text-lowercase
+.btn.text-lowercase
 	letter-spacing: .1em
