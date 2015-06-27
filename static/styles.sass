@@ -89,6 +89,36 @@ h2
 			background: transparent
 	.navbar-toggle .icon-bar
 		background-color: #FFF
+	.navbar-right
+		margin-right: 0
+	@media (max-width: 767px)
+		.navbar-left
+			margin-left: 15px
+
+// Shrunk navbar stuff
+#topNav
+	.navbar-toggle
+		padding: 20px 10px
+		transition: padding .15s linear
+	.navbar-quick-links
+		opacity: 0
+		transition: opacity, margin .15s, .15s linear, linear
+		margin-top: -30px
+		pointer-events: none
+	.navbar-nav > li > a
+		padding-top: 30px
+		padding-bottom: 30px
+		transition: padding .15s linear
+	&.shrunk
+		.navbar-toggle
+			padding: 9px 10px
+		.navbar-nav > li > a
+			padding-top: 15px
+			padding-bottom: 15px
+		.navbar-quick-links
+			opacity: 1
+			margin-top: 0
+			pointer-events: auto
 
 // Specific elements
 
