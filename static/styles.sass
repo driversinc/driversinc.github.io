@@ -3,23 +3,10 @@
 
 @import fonts/styles.css
 
-$vertical-unit: 20px
-$border-radius: 3px
-
-$base-font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$accent-font: 'avantgarde-cond', HelveticaNeue-Condensed, 'Helvetica Neue', Helvetica, Arial, sans-serif
-$funky-font: 'nexa_rust_sansblack', Helvetica, sans-serif
-
-$white: white
-$black: #080808
-$gray-light: #dbdbdb
-$gray-dark: #171717
-$gray: #242424
-$orange-bright: #EF7C2E
-$colors: ('white': $white, 'black': $black, 'gray-light': $gray-light, 'gray-dark': $gray-dark, 'gray': $gray, 'orange-bright': $orange-bright)
-$white-text-colors: ('orange-bright',)
-
+@import variables
 @import panes
+@import flex
+@import panes/titlecard
 
 @function brightness($color)
 	@if type-of($color) == color
