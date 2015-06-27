@@ -1,9 +1,10 @@
-.pane-titlecard
+.pane--titlecard
 	background-color: $gray
 	background-image: url('/static/images/bg1.png')
 	background-size: 150px 80px
 	background-attachment: fixed
 	padding-bottom: 0
+	overflow: hidden
 	> .pane-content
 		display: flex
 		height: 100%
@@ -26,7 +27,10 @@
 		font-family: $accent-font
 		text-transform: uppercase
 		letter-spacing: .15em
-		font-size: 4vw
+		@media (max-width: 767px)
+			font-size: 6vw
 	> h2
 		font-family: $funky-font
 		font-size: 1.8vw
+		@media (max-width: 767px)
+			font-size: 4vw
