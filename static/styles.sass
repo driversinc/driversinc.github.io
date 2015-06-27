@@ -4,9 +4,10 @@
 @import fonts/styles.css
 
 @import variables
-@import panes
 @import flex
+@import panes/base
 @import panes/titlecard
+@import panes/how
 
 @function brightness($color)
 	@if type-of($color) == color
@@ -100,11 +101,17 @@ h2
 	.navbar-toggle
 		padding: 20px 10px
 		transition: padding .15s linear
-	.navbar-quick-links
-		opacity: 0
-		transition: opacity, margin .15s, .15s linear, linear
-		margin-top: -30px
-		pointer-events: none
+	@media (max-width: 767px)
+		.navbar-quick-links
+			transition: opacity, margin .15s, .15s linear, linear
+			margin-top: 12px
+	@media (min-width: 768px)
+		.navbar-quick-links
+			opacity: 0
+			transition: opacity, margin .15s, .15s linear, linear
+			margin-top: -30px
+			pointer-events: none
+
 	.navbar-nav > li > a
 		padding-top: 30px
 		padding-bottom: 30px
