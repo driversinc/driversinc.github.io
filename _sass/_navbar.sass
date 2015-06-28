@@ -1,0 +1,56 @@
+.navbar-black
+	background: $black
+	.navbar-nav > li > a
+		color: $gray-mid
+		font-family: $accent-font
+		font-size: 16px
+		letter-spacing: 2px
+		padding-left: 10px
+		padding-right: 10px
+		&:hover, &:active, &:focus, &.active
+			color: $white
+			background: transparent
+	.navbar-nav > .active > a
+		color: $white
+	.navbar-toggle .icon-bar
+		background-color: $white
+	.navbar-right
+		margin-right: 0
+	@media (max-width: 767px)
+		.navbar-left
+			margin-left: 15px
+
+// Shrunk navbar stuff
+#topNav
+	.navbar-toggle
+		padding: 20px 10px
+		transition: padding .15s linear
+	.navbar-nav > li > a
+		padding-top: 30px
+		padding-bottom: 30px
+		transition: padding .15s linear
+
+	@media (max-width: 767px)
+		.navbar-quick-links
+			transition: opacity, margin .15s, .15s linear, linear
+			margin-top: 12px
+		.navbar-nav > li > a
+			padding-bottom: 15px
+			padding-top: 15px
+	@media (min-width: 768px)
+		.navbar-quick-links
+			opacity: 0
+			transition: opacity, margin .15s, .15s linear, linear
+			margin-top: -30px
+			pointer-events: none
+
+	&.shrunk
+		.navbar-toggle
+			padding: 9px 10px
+		.navbar-nav > li > a
+			padding-top: 15px
+			padding-bottom: 15px
+		.navbar-quick-links
+			opacity: 1
+			margin-top: 0
+			pointer-events: auto

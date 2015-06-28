@@ -1,0 +1,8 @@
+.nav-pills > li > a
+	@extend .btn
+	@extend .btn-orange-bright
+	margin-right: 5px
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li > a:active
+	background-color: lighten($orange-bright, 10%)
+	outline: none

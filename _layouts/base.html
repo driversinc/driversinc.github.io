@@ -15,20 +15,30 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-		<script type="text/javascript">
-		$(function () {
-			var controller = new ScrollMagic.Controller();
-			new ScrollMagic.Scene({
-					duration: 0,
-					triggerElement: ".pane--how"
-				})
-				.setClassToggle("#topNav", "shrunk")
-				.addTo(controller);
-		});
-		</script>
 	</head>
 	<body data-spy="scroll" data-target="#homepageNav">
 		{% include header.html %}
 		{{ content }}
+		<script type="text/javascript">
+			(function () {
+				"use strict";
+
+				// Set up any scroll events:
+				var controller = new ScrollMagic.Controller();
+				new ScrollMagic.Scene({
+						duration: 0,
+						triggerElement: ".pane--how"
+					})
+					.setClassToggle("#topNav", "shrunk")
+					.addTo(controller);
+
+				// Initialize tabs:
+				$('.tabs > li > a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				});
+				$('.tabs > li > a').eq(0).tab('show');
+			}());
+		</script>
 	</body>
 </html>
