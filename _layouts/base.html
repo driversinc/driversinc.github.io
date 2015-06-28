@@ -40,7 +40,7 @@
 				$('.tabs > li > a').eq(0).tab('show');
 
 				// Smooth scrolling:
-				$('a[href*=#]:not([href=#])').click(function() {
+				$('#ScrollNavigation a[href*=#]:not([href=#])').click(function() {
 					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 						var target = $(this.hash);
 							target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
