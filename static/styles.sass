@@ -80,7 +80,7 @@ h2
 .navbar-black
 	background: $black
 	.navbar-nav > li > a
-		color: $gray-light
+		color: $gray-mid
 		font-family: $accent-font
 		font-size: 16px
 		letter-spacing: 2px
@@ -89,8 +89,10 @@ h2
 		&:hover, &:active, &:focus, &.active
 			color: $white
 			background: transparent
+	.navbar-nav > .active > a
+		color: $white
 	.navbar-toggle .icon-bar
-		background-color: #FFF
+		background-color: $white
 	.navbar-right
 		margin-right: 0
 	@media (max-width: 767px)

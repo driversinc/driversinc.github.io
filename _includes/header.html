@@ -16,11 +16,11 @@
 
 		<div class="collapse navbar-collapse" id="homepageNav">
 			<ul class="nav navbar-nav navbar-right" id="ScrollNavigation">
-				<li><a href="/#Home">Home</a></li>
-				<li><a href="/#HowItWorks">How It Works</a></li>
-				<li><a href="/#ServiceArea">Service Area</a></li>
-				<li><a href="/#Partners">Partners</a></li>
-				<li><a href="/#Contact">Contact</a></li>
+				<li><a href="{% if page.home != true %}/{% endif %}#Home">Home</a></li>
+				<li><a href="{% if page.home != true %}/{% endif %}#HowItWorks">How It Works</a></li>
+				<li><a href="{% if page.home != true %}/{% endif %}#ServiceArea">Service Area</a></li>
+				<li><a href="{% if page.home != true %}/{% endif %}#Partners">Partners</a></li>
+				<li><a href="{% if page.home != true %}/{% endif %}#Contact">Contact</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
