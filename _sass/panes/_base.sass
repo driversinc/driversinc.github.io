@@ -3,8 +3,10 @@
 		height: 100%
 
 .pane
-	padding: #{$vertical-unit * 2} 0
-	@media (min-width: 992px)
+	padding: #{$vertical-unit * 8} 0
+	@media (max-width: $screen-sm-max)
+		padding: #{$vertical-unit * 2} 0
+	@media (min-width: $screen-md-min)
 		min-height: 600px
 		height: 100%
 	// Center content in panes by default:

@@ -3,6 +3,13 @@
 	@extend .btn-orange-bright
 	margin-right: 5px
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li > a:active
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li > a:active, .nav-pills > li.active > a:hover
 	background-color: lighten($orange-bright, 10%)
 	outline: none
+
+@media (max-width: $screen-xs-max)
+	.nav-pills > li
+		float: none
+		> a
+			display: block
+			text-align: center
