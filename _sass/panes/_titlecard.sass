@@ -3,13 +3,17 @@
 	background-image: url('/static/images/bg1.png')
 	background-size: 150px 80px
 	background-attachment: fixed
-	padding-top: 80px // to clear the larger navbar
+	padding: 0
 	padding-bottom: 0
 	overflow: hidden
 	> .pane-content
 		display: flex
 		height: 100%
 		flex-direction: column
+
+.first-box.pad-box
+	// clear the navbar:
+	padding-top: 80px
 	@media (max-width: 767px)
 		padding-top: 72px
 
