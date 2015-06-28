@@ -102,10 +102,18 @@ h2
 	.navbar-toggle
 		padding: 20px 10px
 		transition: padding .15s linear
+	.navbar-nav > li > a
+		padding-top: 30px
+		padding-bottom: 30px
+		transition: padding .15s linear
+
 	@media (max-width: 767px)
 		.navbar-quick-links
 			transition: opacity, margin .15s, .15s linear, linear
 			margin-top: 12px
+		.navbar-nav > li > a
+			padding-bottom: 15px
+			padding-top: 15px
 	@media (min-width: 768px)
 		.navbar-quick-links
 			opacity: 0
@@ -113,10 +121,6 @@ h2
 			margin-top: -30px
 			pointer-events: none
 
-	.navbar-nav > li > a
-		padding-top: 30px
-		padding-bottom: 30px
-		transition: padding .15s linear
 	&.shrunk
 		.navbar-toggle
 			padding: 9px 10px
@@ -139,7 +143,22 @@ h2
 	transform: translate3d(0, -50%, 0)
 
 .map
-	background: radial-gradient(circle at 64% 50%, $orange-bright 0%, $orange-bright 30%, rgba($orange-bright, 0) 47%)
+	position: relative
+	&::after
+		position: absolute
+		top: 50.25%
+		left: 63.25%
+		padding-top: 62.5%
+		width: 62.5%
+		border-radius: 50%
+		display: block
+		content: " "
+		height: 0
+		background-color: $orange-bright
+		transform: translate3d(-50%, -50%, 0)
+	> img
+		position: relative
+		z-index: 1
 
 // Bootstrap Overrides
 .btn
