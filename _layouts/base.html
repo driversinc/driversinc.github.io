@@ -24,10 +24,14 @@
 				})
 				.setClassToggle("#topNav", "shrunk")
 				.addTo(controller);
+				$('body').on('activate.bs.scrollspy', function () {
+					console.log('active');
+	})
 		});
+
 		</script>
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#homepageNav">
 		{% include header.html %}
 		{{ content }}
 	</body>
