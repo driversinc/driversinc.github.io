@@ -21,6 +21,7 @@
 @import panes/the-need
 
 @import pages/employment
+@import pages/your-city
 
 @function brightness($color)
 	@if type-of($color) == color
@@ -61,10 +62,14 @@ body
 	position: relative
 	overflow-x: hidden
 
-h2
+h1, h2
 	font-family: $accent-font
 	text-transform: uppercase
 	letter-spacing: .15em
+	.extra
+		display: block
+		text-decoration: underline
+		margin: 0 auto
 
 .pad-box
 	padding: $vertical-unit

@@ -1,0 +1,19 @@
+.your-city
+	padding-left: 100px
+	padding-right: 20px
+	position: relative
+	overflow: hidden
+	&::before
+		content: " "
+		display: block
+		background-image: url("/static/images/tracks.svg")
+		background-repeat: repeat-x
+		background-size: contain
+		position: fixed
+		top: 0
+		left: 60px
+		transform: rotate(90deg)
+		transform-origin: 0 0
+		width: 1000px
+		height: 20px
+		z-index: -1

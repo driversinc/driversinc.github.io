@@ -15,11 +15,11 @@
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-xxs-12">
 				<ul class="nav nav-stacked nav-footer">
-					<li><a href="#Home">Contact Us</a></li>
-					<li><a href="#">Employment</a></li>
-					<li><a href="#">Branches</a></li>
-					<li><a href="#">Materials</a></li>
-					<li><a href="#">Blog</a></li>
+					<li><a href="{% if page.home != true %}/{% endif %}#Contact">Contact Us</a></li>
+					<li><a href="/employment.html">Employment</a></li>
+					<li><a href="/your-city.html">Branches</a></li>
+					<li><a href="/partner.html">Materials</a></li>
+					<li><a href="#TODO">Blog</a></li>
 				</ul>
 			</div>
 		</div>
