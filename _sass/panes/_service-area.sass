@@ -31,14 +31,25 @@
 		position: absolute
 		top: 50.25%
 		left: 63.25%
-		padding-top: 62.5%
-		width: 62.5%
+		height: 61vw
+		width: 61vw
 		border-radius: 50%
 		display: block
 		content: " "
-		height: 0
 		background-color: $orange-bright
 		transform: translate3d(-50%, -50%, 0)
+		@media (min-width: $screen-xs-min)
+			width: 42vw
+			height: 42vw
+		@media (min-width: $screen-sm-min)
+			width: 315px
+			height: 315px
+		@media (min-width: $screen-md-min)
+			width: 360px
+			height: 360px
+		@media (min-width: $screen-lg-min)
+			width: 365px
+			height: 365px
 	&::before
 		animation: blip 4s infinite linear
 	> img
