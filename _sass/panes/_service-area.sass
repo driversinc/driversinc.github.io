@@ -1,3 +1,15 @@
+@keyframes blip
+	0%
+		opacity: .5
+		transform: translate3d(-50%, -50%, 0) scale(1)
+	50%
+		opacity: 0
+		transform: translate3d(-50%, -50%, 0) scale(2)
+
+	100%
+		opacity: 0
+
+
 .pane--service-area
 	position: relative
 	padding-top: 127px
@@ -15,7 +27,7 @@
 
 .map
 	position: relative
-	&::after
+	&::after, &::before
 		position: absolute
 		top: 50.25%
 		left: 63.25%
@@ -27,6 +39,8 @@
 		height: 0
 		background-color: $orange-bright
 		transform: translate3d(-50%, -50%, 0)
+	&::before
+		animation: blip 4s infinite ease-out
 	> img
 		position: relative
 		z-index: 1

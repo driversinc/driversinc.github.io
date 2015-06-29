@@ -81,9 +81,13 @@ h2
 	padding: #{$vertical-unit * .75} #{$vertical-unit * 3.5}
 	font-size: 18px
 
-.col-xxs-12
-	@media (max-width: 680px)
+@media (max-width: $screen-xxs-max)
+	.col-xxs-12
 		width: 100%
+
+	.col-xxs-pull-0, .col-xxs-push-0
+		left: 0
+		right: 0
 
 // Bootstrap Overrides
 .btn
