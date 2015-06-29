@@ -104,6 +104,41 @@ h1, h2
 		left: 0
 		right: 0
 
+.vertical-bars-top
+	background-image: url("/static/images/vertical-bars.svg")
+	background-size: 100px
+	background-position: center bottom
+	background-repeat: repeat-x
+	margin-bottom: 40px
+
+.bg-black-transparent
+	background-color: rgba(black, .6)
+
+.inline-block
+	display: inline-block
+
+.cols
+	text-align: left
+	font-size: 14px
+	line-height: 20px
+	@media (min-width: $screen-xs-min)
+		-webkit-columns: 2
+		-moz-columns: 2
+		columns: 2
+	@media (min-width: $screen-sm-min)
+		-webkit-columns: 3
+		-moz-columns: 3
+		columns: 3
+	@media (min-width: $screen-md-min)
+		-webkit-columns: 4
+		-moz-columns: 4
+		columns: 4
+	@media (min-width: $screen-lg-min)
+		-webkit-columns: 5
+		-moz-columns: 5
+		columns: 5
+
+
 // Bootstrap Overrides
 .btn
 	border-radius: $border-radius
