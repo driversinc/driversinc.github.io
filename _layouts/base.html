@@ -41,7 +41,7 @@
 				$('.tabs > li > a').eq(0).tab('show');
 
 				// Smooth scrolling:
-				$('#ScrollNavigation a[href*=#]:not([href=#]), .nav-footer a[href*=#]:not([href=#])').click(function() {
+				$('#ScrollNavigation a[href*=#]:not([href=#]), .nav-footer a[href*=#]:not([href=#]), .smooth').click(function() {
 					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 						var target = $(this.hash);
 							target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
